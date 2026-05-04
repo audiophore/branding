@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Audiophore">
+  <title>Audiophore</title>
+  <desc>RGB pixel grid where each row represents an FFT frequency band — bass at the bottom (magenta), highs at the top (cyan). The lit pixels form a stylized phi.</desc>
+  
+  <!-- 
+    Grid system: 320x320 viewBox, 5x5 pixel grid.
+    Each pixel: 56px wide with 8px gap. Total: 5*56 + 4*8 = 312. 
+    Centered: (320-312)/2 = 4px outer padding.
+    Pixel positions: 4, 68, 132, 196, 260
+    
+    Grid layout (X = lit, . = empty, with row-color mapping):
+      Row 0  (highs / cyan):     . . X . .
+      Row 1  (mid-high / teal):  . X X X .
+      Row 2  (mid / green):      X X X X X
+      Row 3  (mid-low / amber):  . X X X .
+      Row 4  (bass / magenta):   . . X . .
+  -->
+  
+  <!-- Row 0: highs — cyan -->
+  <rect x="132" y="4"   width="56" height="56" rx="6" fill="#00E5FF"/>
+  
+  <!-- Row 1: mid-highs — teal (with subtle opacity variation for depth) -->
+  <rect x="68"  y="68"  width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+  <rect x="132" y="68"  width="56" height="56" rx="6" fill="#00D4C8"/>
+  <rect x="196" y="68"  width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+  
+  <!-- Row 2: mids — green (full row) -->
+  <rect x="4"   y="132" width="56" height="56" rx="6" fill="#3DD68C" opacity="0.6"/>
+  <rect x="68"  y="132" width="56" height="56" rx="6" fill="#3DD68C" opacity="0.85"/>
+  <rect x="132" y="132" width="56" height="56" rx="6" fill="#3DD68C"/>
+  <rect x="196" y="132" width="56" height="56" rx="6" fill="#3DD68C" opacity="0.85"/>
+  <rect x="260" y="132" width="56" height="56" rx="6" fill="#3DD68C" opacity="0.6"/>
+  
+  <!-- Row 3: mid-lows — amber -->
+  <rect x="68"  y="196" width="56" height="56" rx="6" fill="#FFB020" opacity="0.85"/>
+  <rect x="132" y="196" width="56" height="56" rx="6" fill="#FFB020"/>
+  <rect x="196" y="196" width="56" height="56" rx="6" fill="#FFB020" opacity="0.85"/>
+  
+  <!-- Row 4: bass — magenta -->
+  <rect x="132" y="260" width="56" height="56" rx="6" fill="#FF2D9C"/>
+</svg>

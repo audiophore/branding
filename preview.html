@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Audiophore — Brand Assets Preview</title>
+<style>
+  :root {
+    --accent: #00D4C8;
+    --bg-light: #f8f9fa;
+    --bg-dark: #0a0e1a;
+    --text-light: #1a1f2e;
+    --text-dark: #e8edf5;
+    --muted: #8b95a8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    background: #1f2937;
+    color: var(--text-dark);
+  }
+  h1 { font-size: 28px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 18px; font-weight: 600; margin: 32px 0 16px; color: var(--accent); }
+  .subtitle { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .panel {
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .panel.light {
+    background: var(--bg-light);
+    color: var(--text-light);
+  }
+  .panel.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  .panel-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .item-label {
+    font-size: 11px;
+    opacity: 0.55;
+  }
+  img.symbol { display: block; }
+  .lockup-row { padding: 16px; border: 1px dashed rgba(0,0,0,0.1); border-radius: 8px; }
+  .panel.dark .lockup-row { border-color: rgba(255,255,255,0.1); }
+  
+  .swatch {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+  .panel.light .swatch { background: rgba(0,0,0,0.04); }
+  .swatch-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+
+<h1>Audiophore — Brand Assets</h1>
+<p class="subtitle">Preview of the final logo set: symbol, wordmark, lockup × 5 color variants × all standard sizes.</p>
+
+<!-- Symbol mark -->
+<h2>Symbol — at every size that matters</h2>
+
+<div class="panel light">
+  <div class="panel-label">Light background (full color)</div>
+  <div class="row">
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-28.png" width="28" height="28"/><div class="item-label">28px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-64.png" width="64" height="64"/><div class="item-label">64px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-128.png" width="128" height="128"/><div class="item-label">128px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-256.png" width="256" height="256"/><div class="item-label">256px (avatar)</div></div>
+  </div>
+</div>
+
+<div class="panel dark">
+  <div class="panel-label">Dark background (full color)</div>
+  <div class="row">
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-28.png" width="28" height="28"/><div class="item-label">28px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-64.png" width="64" height="64"/><div class="item-label">64px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-128.png" width="128" height="128"/><div class="item-label">128px</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-256.png" width="256" height="256"/><div class="item-label">256px (avatar)</div></div>
+  </div>
+</div>
+
+<h2>Symbol variants — when to use which</h2>
+
+<div class="panel light">
+  <div class="panel-label">All symbol variants on light background</div>
+  <div class="row">
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-128.png" width="100" height="100"/><div class="item-label">Color (default)</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-teal-128.png" width="100" height="100"/><div class="item-label">Teal (single accent)</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-mono-black-128.png" width="100" height="100"/><div class="item-label">Mono black</div></div>
+  </div>
+</div>
+
+<div class="panel dark">
+  <div class="panel-label">All symbol variants on dark background</div>
+  <div class="row">
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-128.png" width="100" height="100"/><div class="item-label">Color (default)</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-teal-128.png" width="100" height="100"/><div class="item-label">Teal (single accent)</div></div>
+    <div class="item"><img class="symbol" src="logos/png/audiophore-symbol-mono-white-128.png" width="100" height="100"/><div class="item-label">Mono white</div></div>
+  </div>
+</div>
+
+<h2>Lockup — symbol + wordmark together</h2>
+
+<div class="panel light">
+  <div class="panel-label">Light background</div>
+  <div class="lockup-row">
+    <img src="logos/png/audiophore-lockup-1200.png" style="max-width: 100%; height: auto; display: block;"/>
+  </div>
+</div>
+
+<div class="panel dark">
+  <div class="panel-label">Dark background</div>
+  <div class="lockup-row">
+    <img src="logos/png/audiophore-lockup-dark-bg-1200.png" style="max-width: 100%; height: auto; display: block;"/>
+  </div>
+</div>
+
+<h2>Color palette</h2>
+<div class="panel dark">
+  <div class="panel-label">Brand colors</div>
+  <div>
+    <span class="swatch"><span class="swatch-color" style="background: #00D4C8"></span>#00D4C8 — Teal (primary accent)</span>
+    <span class="swatch"><span class="swatch-color" style="background: #00E5FF"></span>#00E5FF — Cyan (highs)</span>
+    <span class="swatch"><span class="swatch-color" style="background: #3DD68C"></span>#3DD68C — Green (mids)</span>
+    <span class="swatch"><span class="swatch-color" style="background: #FFB020"></span>#FFB020 — Amber (mid-lows)</span>
+    <span class="swatch"><span class="swatch-color" style="background: #FF2D9C"></span>#FF2D9C — Magenta (bass)</span>
+  </div>
+  <div style="margin-top: 12px;">
+    <span class="swatch"><span class="swatch-color" style="background: #1a1f2e"></span>#1a1f2e — Ink (text on light)</span>
+    <span class="swatch"><span class="swatch-color" style="background: #FFFFFF; border: 1px solid #ccc;"></span>#FFFFFF — Paper (text on dark)</span>
+  </div>
+</div>
+
+</body>
+</html>
