@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Audiophore — All Logo Concepts</title>
+<style>
+  :root {
+    --accent: #00D4C8;
+    --bg-light: #f8f9fa;
+    --bg-dark: #0a0e1a;
+    --text-light: #1a1f2e;
+    --text-dark: #e8edf5;
+    --muted: #8b95a8;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    padding: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    background: #1f2937;
+    color: var(--text-dark);
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  
+  /* ─── Grid of all concepts at avatar size ─── */
+  .avatar-grid-section {
+    background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-light) 50%, var(--bg-dark) 50%, var(--bg-dark) 100%);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .avatar-grid-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 4px;
+  }
+  
+  .avatar-grid-tagline {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 24px;
+  }
+  
+  .avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .avatar-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .avatar-cell .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .avatar-grid.dark .avatar-cell .label {
+    color: var(--muted);
+  }
+  
+  /* ─── Detailed per-concept rows ─── */
+  .concept {
+    background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-light) 50%, var(--bg-dark) 50%, var(--bg-dark) 100%);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  
+  .concept-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .concept-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(0, 212, 200, 0.12);
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+  }
+  
+  .concept-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+  
+  .concept-tagline {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: -16px;
+    margin-bottom: 24px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .row.dark {
+    color: var(--text-dark);
+  }
+  
+  .row-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    font-weight: 500;
+    width: 70px;
+  }
+  
+  .row.dark .row-label {
+    color: var(--muted);
+  }
+  
+  .size-cluster {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .size-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .size-label {
+    font-size: 10px;
+    color: #6b7280;
+  }
+  
+  .row.dark .size-label {
+    color: var(--muted);
+  }
+  
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .wordmark {
+    font-family: 'JetBrains Mono', 'Menlo', monospace;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text-light);
+  }
+  
+  .row.dark .wordmark {
+    color: var(--text-dark);
+  }
+  
+  .wordmark .accent {
+    color: var(--accent);
+  }
+  
+  .nav {
+    position: sticky;
+    top: 0;
+    background: #1f2937;
+    padding: 16px 0;
+    margin: -32px -32px 24px;
+    padding: 16px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 10;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .nav a {
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  
+  .nav a:hover {
+    background: rgba(0, 212, 200, 0.1);
+  }
+</style>
+</head>
+<body>
+
+<h1>Audiophore — Nine Logo Concepts</h1>
+<p class="subtitle">All concepts at avatar size, then detailed view with wordmarks. Light and dark backgrounds. Color: <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;font-family:monospace">#00D4C8</code></p>
+
+<div class="nav">
+  <div class="nav-links">
+    <a href="#all">All at a glance</a>
+    <a href="#c1">1 · Carrier</a>
+    <a href="#c2">2 · Phi</a>
+    <a href="#c3">3 · Pulse</a>
+    <a href="#c4">4 · Lens</a>
+    <a href="#c5">5 · A-Phi</a>
+    <a href="#c6">6 · Bracket</a>
+    <a href="#c7">7 · Grid</a>
+    <a href="#c8">8 · Equalizer</a>
+    <a href="#c9">9 · Diaphragm</a>
+  </div>
+</div>
+
+<!-- ─── ALL AT A GLANCE: avatar-size grid ─── -->
+<div id="all" class="avatar-grid-section">
+  <div class="avatar-grid-title">All at avatar size — light background</div>
+  <div class="avatar-grid-tagline">28×28, the size GitHub will actually display them at</div>
+  <div class="avatar-grid">
+    <!-- Concept 1: Carrier -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <path d="M 40 200 Q 60 170, 80 200 T 120 200 T 160 200" stroke="#00D4C8" fill="none" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="200" cy="200" r="44" stroke="#00D4C8" fill="none" stroke-width="14"/>
+        <circle cx="200" cy="200" r="8" fill="#00D4C8"/>
+        <rect x="248" y="180" width="14" height="40" rx="3" fill="#00D4C8"/>
+        <rect x="272" y="160" width="14" height="80" rx="3" fill="#00D4C8"/>
+        <rect x="296" y="140" width="14" height="120" rx="3" fill="#00D4C8"/>
+        <rect x="320" y="170" width="14" height="60" rx="3" fill="#00D4C8"/>
+        <rect x="344" y="190" width="14" height="20" rx="3" fill="#00D4C8"/>
+      </svg>
+      <span class="label">1 · Carrier</span>
+    </div>
+    <!-- Concept 2: Phi -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <circle cx="200" cy="200" r="100" stroke="#00D4C8" fill="none" stroke-width="16"/>
+        <rect x="190" y="40" width="20" height="60" rx="4" fill="#00D4C8"/>
+        <rect x="178" y="160" width="10" height="80" rx="2" fill="#00D4C8"/>
+        <rect x="194" y="140" width="10" height="120" rx="2" fill="#00D4C8"/>
+        <rect x="210" y="170" width="10" height="60" rx="2" fill="#00D4C8"/>
+        <rect x="190" y="300" width="20" height="60" rx="4" fill="#00D4C8"/>
+      </svg>
+      <span class="label">2 · Phi</span>
+    </div>
+    <!-- Concept 3: Pulse -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <circle cx="200" cy="200" r="40" stroke="#00D4C8" fill="none" stroke-width="10"/>
+        <circle cx="200" cy="200" r="72" stroke="#00D4C8" fill="none" stroke-width="8" opacity="0.75"/>
+        <circle cx="200" cy="200" r="108" stroke="#00D4C8" fill="none" stroke-width="6" opacity="0.5"/>
+        <circle cx="200" cy="200" r="144" stroke="#00D4C8" fill="none" stroke-width="4" opacity="0.3"/>
+        <line x1="20" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/>
+        <line x1="220" y1="200" x2="380" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="200" cy="200" r="14" fill="#00D4C8"/>
+      </svg>
+      <span class="label">3 · Pulse</span>
+    </div>
+    <!-- Concept 4: Lens -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/>
+        <line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/>
+        <line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/>
+        <rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/>
+        <line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="350" cy="200" r="20" fill="#00D4C8"/>
+      </svg>
+      <span class="label">4 · Lens</span>
+    </div>
+    <!-- Concept 5: A-Phi -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/>
+        <line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/>
+        <ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/>
+        <line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/>
+      </svg>
+      <span class="label">5 · A-Phi</span>
+    </div>
+    <!-- Concept 6: Bracket -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <span class="label">6 · Bracket</span>
+    </div>
+    <!-- Concept 7: Grid -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/>
+        <rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/>
+        <rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/>
+        <rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/>
+        <rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/>
+        <rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/>
+        <rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/>
+        <rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/>
+      </svg>
+      <span class="label">7 · Grid</span>
+    </div>
+    <!-- Concept 8: Equalizer -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/>
+        <rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/>
+        <rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/>
+        <rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/>
+        <rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/>
+        <rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/>
+        <rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/>
+        <rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/>
+        <rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/>
+      </svg>
+      <span class="label">8 · Equalizer</span>
+    </div>
+    <!-- Concept 9: Diaphragm -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48">
+        <circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/>
+        <circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/>
+        <circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/>
+        <circle cx="200" cy="200" r="40" fill="#00D4C8"/>
+        <line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <span class="label">9 · Diaphragm</span>
+    </div>
+  </div>
+
+  <div class="avatar-grid-title" style="color: var(--text-dark); margin-top: 32px;">All at avatar size — dark background</div>
+  <div class="avatar-grid-tagline" style="color: var(--muted);">Same size, different surroundings</div>
+  <div class="avatar-grid dark">
+    <!-- Same 9 svgs repeated against dark -->
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><path d="M 40 200 Q 60 170, 80 200 T 120 200 T 160 200" stroke="#00D4C8" fill="none" stroke-width="14" stroke-linecap="round"/><circle cx="200" cy="200" r="44" stroke="#00D4C8" fill="none" stroke-width="14"/><circle cx="200" cy="200" r="8" fill="#00D4C8"/><rect x="248" y="180" width="14" height="40" rx="3" fill="#00D4C8"/><rect x="272" y="160" width="14" height="80" rx="3" fill="#00D4C8"/><rect x="296" y="140" width="14" height="120" rx="3" fill="#00D4C8"/><rect x="320" y="170" width="14" height="60" rx="3" fill="#00D4C8"/><rect x="344" y="190" width="14" height="20" rx="3" fill="#00D4C8"/></svg>
+      <span class="label">1 · Carrier</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><circle cx="200" cy="200" r="100" stroke="#00D4C8" fill="none" stroke-width="16"/><rect x="190" y="40" width="20" height="60" rx="4" fill="#00D4C8"/><rect x="178" y="160" width="10" height="80" rx="2" fill="#00D4C8"/><rect x="194" y="140" width="10" height="120" rx="2" fill="#00D4C8"/><rect x="210" y="170" width="10" height="60" rx="2" fill="#00D4C8"/><rect x="190" y="300" width="20" height="60" rx="4" fill="#00D4C8"/></svg>
+      <span class="label">2 · Phi</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><circle cx="200" cy="200" r="40" stroke="#00D4C8" fill="none" stroke-width="10"/><circle cx="200" cy="200" r="72" stroke="#00D4C8" fill="none" stroke-width="8" opacity="0.75"/><circle cx="200" cy="200" r="108" stroke="#00D4C8" fill="none" stroke-width="6" opacity="0.5"/><circle cx="200" cy="200" r="144" stroke="#00D4C8" fill="none" stroke-width="4" opacity="0.3"/><line x1="20" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><line x1="220" y1="200" x2="380" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="200" cy="200" r="14" fill="#00D4C8"/></svg>
+      <span class="label">3 · Pulse</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+      <span class="label">4 · Lens</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+      <span class="label">5 · A-Phi</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="label">6 · Bracket</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+      <span class="label">7 · Grid</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+      <span class="label">8 · Equalizer</span>
+    </div>
+    <div class="avatar-cell">
+      <svg viewBox="0 0 400 400" width="48" height="48"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+      <span class="label">9 · Diaphragm</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Now individual concept cards with wordmarks ─── -->
+<!-- Concept 4: Lens -->
+<div id="c4" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">04</span>
+    <span class="concept-name">The Lens</span>
+  </div>
+  <div class="concept-tagline">Multiple inputs converge through an aperture into a single beam. The phore as focal point.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><line x1="40" y1="120" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="200" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><line x1="40" y1="280" x2="180" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/><rect x="190" y="100" width="14" height="200" rx="4" fill="#00D4C8"/><line x1="220" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/><circle cx="350" cy="200" r="20" fill="#00D4C8"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 5: A-Phi -->
+<div id="c5" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">05</span>
+    <span class="concept-name">The A-Phi Monogram</span>
+  </div>
+  <div class="concept-tagline">Stylized "A" where the crossbar contains a horizontal phi. Conventional org-branding move.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><line x1="100" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><line x1="300" y1="340" x2="200" y2="60" stroke="#00D4C8" stroke-width="22" stroke-linecap="round"/><ellipse cx="200" cy="220" rx="50" ry="22" stroke="#00D4C8" stroke-width="14" fill="none"/><line x1="130" y1="220" x2="270" y2="220" stroke="#00D4C8" stroke-width="14" stroke-linecap="round"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 6: Bracket -->
+<div id="c6" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">06</span>
+    <span class="concept-name">The Bracket</span>
+  </div>
+  <div class="concept-tagline">Code-coded angle brackets containing a waveform. Engineering credibility, audio specificity.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><path d="M 130 80 L 70 200 L 130 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 270 80 L 330 200 L 270 320" stroke="#00D4C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 150 200 Q 170 160, 190 200 T 230 200 T 270 200" stroke="#00D4C8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 7: Grid -->
+<div id="c7" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">07</span>
+    <span class="concept-name">The Grid</span>
+  </div>
+  <div class="concept-tagline">Pixel-grid mark with brightness variation forming a stylized phi/diamond. Pixels are the literal output.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><rect x="172" y="34" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="106" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="98" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="98" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="40" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="162" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="304" y="162" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.6"/><rect x="106" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="226" width="56" height="56" rx="6" fill="#00D4C8"/><rect x="238" y="226" width="56" height="56" rx="6" fill="#00D4C8" opacity="0.85"/><rect x="172" y="290" width="56" height="56" rx="6" fill="#00D4C8"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 8: Equalizer -->
+<div id="c8" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">08</span>
+    <span class="concept-name">The Equalizer</span>
+  </div>
+  <div class="concept-tagline">FFT bars rising/falling to form an inverted-V silhouette. Performative, scene-credible.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><rect x="42" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/><rect x="78" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="114" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="150" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="186" y="60" width="28" height="300" rx="4" fill="#00D4C8"/><rect x="222" y="120" width="28" height="240" rx="4" fill="#00D4C8" opacity="0.85"/><rect x="258" y="180" width="28" height="180" rx="4" fill="#00D4C8" opacity="0.7"/><rect x="294" y="240" width="28" height="120" rx="4" fill="#00D4C8" opacity="0.55"/><rect x="330" y="280" width="28" height="80" rx="4" fill="#00D4C8" opacity="0.4"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 9: Diaphragm -->
+<div id="c9" class="concept">
+  <div class="concept-header">
+    <span class="concept-num">09</span>
+    <span class="concept-name">The Diaphragm</span>
+  </div>
+  <div class="concept-tagline">Speaker-cone-inspired concentric form with a beam of light. Suggests transducer, the physical translator.</div>
+  <div class="row">
+    <div class="row-label">Light bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+  <div class="row dark">
+    <div class="row-label">Dark bg</div>
+    <div class="size-cluster">
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="28" height="28"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+        <div class="size-label">28px</div>
+      </div>
+      <div class="size-item">
+        <svg viewBox="0 0 400 400" width="96" height="96"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+        <div class="size-label">96px</div>
+      </div>
+    </div>
+    <div class="lockup">
+      <svg viewBox="0 0 400 400" width="44" height="44"><circle cx="200" cy="200" r="160" stroke="#00D4C8" stroke-width="8" fill="none" opacity="0.35"/><circle cx="200" cy="200" r="120" stroke="#00D4C8" stroke-width="10" fill="none" opacity="0.6"/><circle cx="200" cy="200" r="80" stroke="#00D4C8" stroke-width="12" fill="none" opacity="0.85"/><circle cx="200" cy="200" r="40" fill="#00D4C8"/><line x1="240" y1="200" x2="320" y2="200" stroke="#00D4C8" stroke-width="10" stroke-linecap="round"/></svg>
+      <span class="wordmark">audio<span class="accent">phore</span></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
