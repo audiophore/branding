@@ -141,34 +141,38 @@ ico_sizes = [16, 32, 48, 64]   # multi-resolution .ico bundle
 [variants]
 # Each entry produces one set of files. The values map roles → palette keys.
 [variants.color]
-purpose      = "Canonical full-color mark. Default for web, app UIs, social, GitHub avatar, slides."
+purpose      = "Web, app UIs, social, GitHub avatar, slides — wherever full color is available and renders correctly"
 # When color = "color", spectrum is used naturally (rows colored per [symbol.rows])
 mode         = "spectrum"
 ink          = "ink"
 accent       = "mid_highs"
 
 [variants.dark_bg]
+# dark_bg is a background-tuning of the canonical mark, not a standalone
+# "use when" choice — it's omitted from the BRANDING.md variants table
+# (dark surfaces are covered by the usage prose instead).
+show_in_table = false
 purpose      = "Canonical mark, but tuned for dark surfaces (the ink color flips to paper)."
 mode         = "spectrum"
 ink          = "paper"
 accent       = "mid_highs"
 
 [variants.teal]
-purpose      = "Single-accent fallback. Use when the context can render color but only one."
+purpose      = "Single-color contexts that *can* render color but only one — embroidery on a dark cap, single-color Pantone print, accent overlays"
 mode         = "single"
 single_color = "mid_highs"
 ink          = "mid_highs"
 accent       = "mid_highs"
 
 [variants.mono_black]
-purpose      = "Print, light backgrounds, single-color media that wants dark on light."
+purpose      = "Black-on-white print, light backgrounds where color isn't appropriate (academic papers, formal docs)"
 mode         = "single"
 single_color = "ink"
 ink          = "ink"
 accent       = "ink"
 
 [variants.mono_white]
-purpose      = "Print on dark stock, terminal banners, any single-color-on-dark context."
+purpose      = "White-on-dark print, dark backgrounds where color isn't appropriate, terminal banners"
 mode         = "single"
 single_color = "paper"
 ink          = "paper"
