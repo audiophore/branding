@@ -4,6 +4,10 @@ This directory contains the official Audiophore logo files and brand
 guidelines. See `BRANDING.md` for usage rules, color values, and
 typography.
 
+> **Regenerating the assets?** The kit builds from `brand.toml` —
+> run `make install && make help` to get started. (Full developer
+> docs land in a later pass.)
+
 ## Quick start
 
 - **GitHub org avatar:** upload `logos/png/audiophore-symbol-460.png`

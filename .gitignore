@@ -31,3 +31,17 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### Python ###
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+### Editors ###
+.vscode/
+.idea/
+*.sw?
+
+# We DO commit logos/ — they are the canonical artifacts that downstream
+# consumers fetch. CI verifies they match the build.
+

@@ -1,0 +1,14 @@
+# Audiophore brand asset generator — Python dependencies
+#
+# Pinned to known-good versions. Update deliberately.
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Also required (system packages, not Python):
+#   - ImageMagick (for `convert` to build favicon.ico)
+#   - Poppins font installed at the path in brand.toml
+#     (or update brand.toml's wordmark.font_path)
+
+cairosvg>=2.7.0,<3.0
+fonttools>=4.50.0,<5.0

@@ -1,0 +1,175 @@
+# Audiophore brand configuration
+# ──────────────────────────────────────────────────────────────────────
+#
+# This is the canonical brand-asset source of truth. Edit here and
+# re-run `make` (or `python scripts/build.py`) to regenerate every
+# downstream artifact: SVGs, PNGs, favicons, BRANDING.md tables.
+#
+# CHANGES HERE PROPAGATE EVERYWHERE. Use thoughtfully.
+
+[meta]
+name        = "Audiophore"
+slug        = "audiophore"
+tagline     = "A real-time bridge between Synesthesia VJ software and the lighting ecosystem"
+url         = "https://audiophore.dev"
+
+# ──────────────────────────────────────────────────────────────────────
+# Color palette
+#
+# Each row of the symbol grid corresponds to an FFT band Audiophore
+# consumes. The (band, color, hex) mapping is the brand contract:
+# changing it changes both the assets AND the BRANDING.md docs.
+# ──────────────────────────────────────────────────────────────────────
+
+[colors.spectrum]
+# Top row → bottom row of the grid mark
+highs       = "#00E5FF"   # cyan
+mid_highs   = "#00D4C8"   # teal (also primary brand accent)
+mids        = "#3DD68C"   # green
+mid_lows    = "#FFB020"   # amber
+bass        = "#FF2D9C"   # magenta
+
+[colors.neutrals]
+ink         = "#1a1f2e"   # primary text on light backgrounds
+paper       = "#FFFFFF"   # primary text on dark backgrounds
+mute        = "#8b95a8"   # secondary text, captions
+wash_light  = "#f8f9fa"   # neutral light surface
+wash_dark   = "#0a0e1a"   # neutral dark surface
+
+[colors.semantics]
+# Friendly names → which palette entry to use.
+# Edit BRANDING.md descriptions only by editing this section.
+primary_accent = "mid_highs"   # the single "brand color" when only one is allowed
+
+# ──────────────────────────────────────────────────────────────────────
+# Symbol layout
+#
+# A 5x5 grid in a 320-unit viewBox. Pixels are 56 units, gaps 8 units.
+# This produces 5*56 + 4*8 = 312 used + 8 outer margin = 320.
+# ──────────────────────────────────────────────────────────────────────
+
+[symbol]
+viewbox     = 320
+pixel_size  = 56
+pixel_gap   = 8
+pixel_radius = 6   # corner radius for individual cells
+
+# Row → color mapping (top to bottom = highs to bass)
+# Each row references a key in [colors.spectrum].
+[symbol.rows]
+0 = "highs"
+1 = "mid_highs"
+2 = "mids"
+3 = "mid_lows"
+4 = "bass"
+
+# Which cells are lit in each row (0 = off, 1 = full opacity).
+# Together they form a stylized phi (φ).
+# Layout (X = lit, . = off):
+#   . . X . .
+#   . X X X .
+#   X X X X X
+#   . X X X .
+#   . . X . .
+[symbol.layout]
+rows = [
+  [0, 0, 1, 0, 0],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 0],
+  [0, 0, 1, 0, 0],
+]
+
+# Per-row opacity ramp for visual depth.
+# Center column always 1.0; edges fade for a subtle 3D feel.
+# Indexed by distance-from-center within a row.
+[symbol.opacity]
+distance_0 = 1.0
+distance_1 = 0.85
+distance_2 = 0.6
+
+# ──────────────────────────────────────────────────────────────────────
+# Wordmark
+# ──────────────────────────────────────────────────────────────────────
+
+[wordmark]
+text             = "audiophore"
+font_family      = "Poppins"
+font_weight      = "Medium"
+# Default path matches the Linux/CI environment (Debian/Ubuntu `fonts-poppins`),
+# which is the canonical reproduction environment. For local dev on another OS,
+# set the $POPPINS_TTF env var to your Poppins-Medium.ttf instead of editing this.
+font_path        = "/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf"
+# How the wordmark is colored:
+# Index range [0:split] is "ink color" (or the dark equivalent)
+# Index range [split:] is "accent color"
+# This emphasizes the "-phore" etymology
+split            = 5            # "audio" | "phore"
+
+# ──────────────────────────────────────────────────────────────────────
+# Lockup (symbol + wordmark side-by-side)
+# ──────────────────────────────────────────────────────────────────────
+
+[lockup]
+gap                  = 60        # space between symbol and wordmark
+wordmark_cap_target  = 200       # cap-height of wordmark when laid out next to a 320 symbol
+
+# ──────────────────────────────────────────────────────────────────────
+# Output sizes
+#
+# Standard dimensions for raster exports. Add new entries here, run
+# the build, and the new sizes appear automatically.
+# ──────────────────────────────────────────────────────────────────────
+
+[sizes.symbol]
+px = [28, 64, 128, 256, 460, 512, 1024]
+
+[sizes.lockup]
+px = [400, 800, 1200, 2400]
+
+[sizes.wordmark]
+px = [200, 400, 800]
+
+[sizes.favicon]
+px = [16, 32, 48, 64, 180, 192, 512]
+ico_sizes = [16, 32, 48, 64]   # multi-resolution .ico bundle
+
+# ──────────────────────────────────────────────────────────────────────
+# Variants (which color treatments to generate for which assets)
+# ──────────────────────────────────────────────────────────────────────
+
+[variants]
+# Each entry produces one set of files. The values map roles → palette keys.
+[variants.color]
+purpose      = "Canonical full-color mark. Default for web, app UIs, social, GitHub avatar, slides."
+# When color = "color", spectrum is used naturally (rows colored per [symbol.rows])
+mode         = "spectrum"
+ink          = "ink"
+accent       = "mid_highs"
+
+[variants.dark_bg]
+purpose      = "Canonical mark, but tuned for dark surfaces (the ink color flips to paper)."
+mode         = "spectrum"
+ink          = "paper"
+accent       = "mid_highs"
+
+[variants.teal]
+purpose      = "Single-accent fallback. Use when the context can render color but only one."
+mode         = "single"
+single_color = "mid_highs"
+ink          = "mid_highs"
+accent       = "mid_highs"
+
+[variants.mono_black]
+purpose      = "Print, light backgrounds, single-color media that wants dark on light."
+mode         = "single"
+single_color = "ink"
+ink          = "ink"
+accent       = "ink"
+
+[variants.mono_white]
+purpose      = "Print on dark stock, terminal banners, any single-color-on-dark context."
+mode         = "single"
+single_color = "paper"
+ink          = "paper"
+accent       = "paper"
