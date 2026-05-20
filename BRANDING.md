@@ -7,6 +7,12 @@ in a fork, a derivative project, an article, an integration page, a
 talk slide — these are the rules. They exist to keep the project
 visually consistent across contexts.
 
+> **This file is partly generated.** The colour tables below live in
+> `<!-- GENERATED -->` blocks that `scripts/render_branding_md.py`
+> rebuilds from `brand.toml`. Everything else is hand-written prose,
+> preserved verbatim across rebuilds — edit it freely. Run `make check`
+> to verify the generated tables are in sync with `brand.toml`.
+
 ---
 
 ## The mark
@@ -15,6 +21,7 @@ The Audiophore symbol is a **5×5 RGB pixel grid** where each row is
 colored to represent a frequency band that the project actually
 consumes from its audio analysis pipeline. Reading top to bottom:
 
+<!-- GENERATED:palette-table -->
 | Row | Frequency band | Color | Hex |
 |-----|---------------|-------|-----|
 | Top | Highs | Cyan | `#00E5FF` |
@@ -22,6 +29,7 @@ consumes from its audio analysis pipeline. Reading top to bottom:
 | Middle | Mids | Green | `#3DD68C` |
 | 4th | Mid-lows | Amber | `#FFB020` |
 | Bottom | Bass | Magenta | `#FF2D9C` |
+<!-- /GENERATED -->
 
 The lit pixels form a stylized phi (φ) — the etymological root of
 *-phore* — making the mark a piece of visual vocabulary that names
@@ -34,12 +42,14 @@ itself.
 Five color treatments are provided. Use the most expressive one your
 context supports.
 
+<!-- GENERATED:variants-table -->
 | Variant | Use when |
 |---------|----------|
 | **Color** (canonical) | Web, app UIs, social, GitHub avatar, slides — wherever full color is available and renders correctly |
 | **Teal** (single accent) | Single-color contexts that *can* render color but only one — embroidery on a dark cap, single-color Pantone print, accent overlays |
 | **Mono black** | Black-on-white print, light backgrounds where color isn't appropriate (academic papers, formal docs) |
 | **Mono white** | White-on-dark print, dark backgrounds where color isn't appropriate, terminal banners |
+<!-- /GENERATED -->
 
 For each color treatment, three forms exist: **symbol-only** (favicon
 and avatar), **wordmark-only** (header bars where the symbol would be
@@ -65,11 +75,13 @@ output, plot accents, etc.
 The five colors that, taken together, are the brand. Each has a
 specific semantic meaning tied to FFT band coding:
 
+<!-- GENERATED:spectrum-list -->
 - **Cyan** `#00E5FF` — highs (treble, hats, top-end)
 - **Teal** `#00D4C8` — mid-highs (vocals, snares)
 - **Green** `#3DD68C` — mids (the harmonic body)
 - **Amber** `#FFB020` — mid-lows (warmth, low harmonics)
 - **Magenta** `#FF2D9C` — bass (kicks, sub)
+<!-- /GENERATED -->
 
 Use them in this order whenever you visualize multiple bands. The
 ordering matters — it matches the literal high-to-low frequency
@@ -77,11 +89,13 @@ arrangement of the pixel grid in the symbol.
 
 ### Neutrals
 
+<!-- GENERATED:neutrals-list -->
 - **Ink** `#1a1f2e` — primary text on light backgrounds
 - **Paper** `#FFFFFF` — primary text on dark backgrounds
 - **Mute** `#8b95a8` — secondary text, captions, metadata
 - **Wash light** `#f8f9fa` — neutral light surface (panel backgrounds)
 - **Wash dark** `#0a0e1a` — neutral dark surface
+<!-- /GENERATED -->
 
 ---
 
