@@ -53,6 +53,8 @@ viewbox     = 320
 pixel_size  = 56
 pixel_gap   = 8
 pixel_radius = 6   # corner radius for individual cells
+# Accessibility text emitted as <desc> in the symbol SVG.
+description = "RGB pixel grid where each row represents an FFT frequency band — bass at the bottom (magenta), highs at the top (cyan). The lit pixels form a stylized phi."
 
 # Row → color mapping (top to bottom = highs to bass)
 # Each row references a key in [colors.spectrum].
@@ -96,10 +98,10 @@ distance_2 = 0.6
 text             = "audiophore"
 font_family      = "Poppins"
 font_weight      = "Medium"
-# Default path matches the Linux/CI environment (Debian/Ubuntu `fonts-poppins`),
-# which is the canonical reproduction environment. For local dev on another OS,
-# set the $POPPINS_TTF env var to your Poppins-Medium.ttf instead of editing this.
-font_path        = "/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf"
+# The wordmark glyph paths are derived from this exact font, vendored in-repo
+# (OFL) so the build is fully reproducible — no system font install, no distro
+# drift. Relative paths resolve against the repo root; override with $POPPINS_TTF.
+font_path        = "fonts/Poppins-Medium.ttf"
 # How the wordmark is colored:
 # Index range [0:split] is "ink color" (or the dark equivalent)
 # Index range [split:] is "accent color"

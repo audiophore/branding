@@ -113,9 +113,12 @@ def symbol_svg(cfg: dict, variant: str) -> str:
 
     rects_str = "\n".join(rects)
 
+    desc = sym.get("description")
+    desc_line = f"\n  <desc>{desc}</desc>" if desc else ""
+
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vb} {vb}" width="{vb}" height="{vb}" role="img" aria-label="{cfg["meta"]["name"]}">
-  <title>{cfg["meta"]["name"]}</title>
+  <title>{cfg["meta"]["name"]}</title>{desc_line}
 {rects_str}
 </svg>
 '''
@@ -146,18 +149,19 @@ def extract_text_paths(cfg: dict) -> tuple[list[tuple[str, str, int, int]], int,
     glyph_data is a list of (char, svg_d, x_offset, advance_width).
     """
     wm = cfg["wordmark"]
-    # $POPPINS_TTF overrides the brand.toml path for local dev (e.g. macOS),
-    # where Poppins lives somewhere other than the Linux/CI default.
-    font_path = os.environ.get("POPPINS_TTF") or wm["font_path"]
-    if not Path(font_path).exists():
+    # $POPPINS_TTF overrides the vendored font for local dev. A relative
+    # brand.toml path resolves against the repo root.
+    font_path = Path(os.environ.get("POPPINS_TTF") or wm["font_path"])
+    if not font_path.is_absolute():
+        font_path = ROOT / font_path
+    if not font_path.exists():
         raise FileNotFoundError(
             f"Font not found: {font_path}\n"
-            f"Install Poppins via your system font manager, then either set "
-            f"$POPPINS_TTF to the .ttf path or update wordmark.font_path in "
-            f"brand.toml."
+            f"The wordmark needs Poppins-Medium. Set $POPPINS_TTF to a .ttf "
+            f"path or fix wordmark.font_path in brand.toml."
         )
 
-    font = TTFont(font_path)
+    font = TTFont(str(font_path))
     glyph_set = font.getGlyphSet()
     cmap = font.getBestCmap()
     hmtx = font["hmtx"]
