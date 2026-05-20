@@ -1,0 +1,43 @@
+name: Verify brand build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            imagemagick \
+            libcairo2 \
+            libjpeg-turbo8
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verify BRANDING.md is in sync with brand.toml
+        run: make check
+
+      - name: Build all assets
+        run: make build
+
+      - name: Verify checked-in assets match build output
+        run: |
+          git diff --exit-code -- logos/ || {
+            echo "::error::Generated assets in logos/ differ from checked-in versions."
+            echo "::error::Run 'make' locally and commit the result."
+            exit 1
+          }
