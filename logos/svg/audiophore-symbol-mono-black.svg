@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Audiophore">
   <title>Audiophore</title>
-  
-  <!-- Monochrome black. Use on light backgrounds, in single-color print, etched/embroidered contexts. -->
-  
-  <rect x="132" y="4"   width="56" height="56" rx="6" fill="#1a1f2e"/>
-  
-  <rect x="68"  y="68"  width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
-  <rect x="132" y="68"  width="56" height="56" rx="6" fill="#1a1f2e"/>
-  <rect x="196" y="68"  width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
-  
-  <rect x="4"   y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.6"/>
-  <rect x="68"  y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
+  <desc>RGB pixel grid where each row represents an FFT frequency band — bass at the bottom (magenta), highs at the top (cyan). The lit pixels form a stylized phi.</desc>
+  <rect x="132" y="4" width="56" height="56" rx="6" fill="#1a1f2e"/>
+  <rect x="68" y="68" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
+  <rect x="132" y="68" width="56" height="56" rx="6" fill="#1a1f2e"/>
+  <rect x="196" y="68" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
+  <rect x="4" y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.6"/>
+  <rect x="68" y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
   <rect x="132" y="132" width="56" height="56" rx="6" fill="#1a1f2e"/>
   <rect x="196" y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
   <rect x="260" y="132" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.6"/>
-  
-  <rect x="68"  y="196" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
+  <rect x="68" y="196" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
   <rect x="132" y="196" width="56" height="56" rx="6" fill="#1a1f2e"/>
   <rect x="196" y="196" width="56" height="56" rx="6" fill="#1a1f2e" opacity="0.85"/>
-  
   <rect x="132" y="260" width="56" height="56" rx="6" fill="#1a1f2e"/>
 </svg>
