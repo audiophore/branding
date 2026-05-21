@@ -6,7 +6,19 @@
       "package-name": "audiophore-brand-kit",
       "include-component-in-tag": false,
       "changelog-path": "CHANGELOG.md",
-      "release-as": "1.0.0"
+      "release-as": "1.0.0",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "perf", "section": "Performance" },
+        { "type": "docs", "section": "Documentation" },
+        { "type": "refactor", "section": "Code Refactoring" },
+        { "type": "ci", "section": "Build & Tooling" },
+        { "type": "build", "section": "Build & Tooling" },
+        { "type": "chore", "section": "Chores" },
+        { "type": "test", "section": "Tests", "hidden": true },
+        { "type": "style", "section": "Styles", "hidden": true }
+      ]
     }
   }
 }
