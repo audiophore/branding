@@ -31,6 +31,34 @@ working sizes against light and dark backgrounds.
     └── favicon/        ← favicon.ico and PWA icon sizes
 ```
 
+## Consuming the kit
+
+For ad-hoc use, just grab a file (see *Quick start*). To consume the kit at a
+**pinned version** — so a brand update can't silently restyle your project —
+use a tagged release. Releases are versioned `vX.Y.Z` and listed on the
+[Releases page](https://github.com/audiophore/branding/releases); each one
+ships a `.zip` / `.tar.gz` bundle of `logos/`, `BRANDING.md`, and `preview.html`.
+
+**As a git submodule** (how `audiophore/website` consumes it):
+
+```sh
+git submodule add https://github.com/audiophore/branding.git branding
+git -C branding checkout v1.0.0      # pin to a release tag
+git add branding && git commit       # the recorded submodule commit is your version pin
+```
+
+To move to a newer release later, check out the new tag inside the submodule
+and commit the bump — a reviewable one-line diff.
+
+**As a downloaded bundle:**
+
+```sh
+gh release download v1.0.0 --repo audiophore/branding   # grabs the .zip + .tar.gz
+```
+
+Either way, the `logos/` directory layout and filenames are a stable contract
+(see *Files* above), so a pin bump never moves assets out from under you.
+
 ## Developing the kit
 
 Every asset in `logos/` — and the tables in `BRANDING.md` — is generated
@@ -72,3 +100,12 @@ Common tasks:
 CI re-runs `make` on every PR and fails if the committed `logos/` or
 `BRANDING.md` drift from what `brand.toml` produces — so the only way to
 change an asset is via `brand.toml` + `make`.
+
+### Releases
+
+Releases are automated with [release-please](https://github.com/googleapis/release-please).
+Merging changes to `main` opens (or updates) a `chore(main): release X.Y.Z` PR
+carrying the version bump and changelog; **merge that PR to cut the release** —
+it tags `vX.Y.Z`, publishes the GitHub Release, and attaches the asset bundle.
+There's no manual `git tag` or `gh release create`. Version bumps follow
+Conventional Commits: `feat:` → minor, `fix:` → patch.
