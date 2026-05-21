@@ -10,11 +10,11 @@
         { "type": "feat", "section": "Features" },
         { "type": "fix", "section": "Bug Fixes" },
         { "type": "perf", "section": "Performance" },
-        { "type": "docs", "section": "Documentation" },
         { "type": "refactor", "section": "Code Refactoring" },
-        { "type": "ci", "section": "Build & Tooling" },
-        { "type": "build", "section": "Build & Tooling" },
-        { "type": "chore", "section": "Chores" },
+        { "type": "docs", "section": "Documentation", "hidden": true },
+        { "type": "ci", "section": "Build & Tooling", "hidden": true },
+        { "type": "build", "section": "Build & Tooling", "hidden": true },
+        { "type": "chore", "section": "Chores", "hidden": true },
         { "type": "test", "section": "Tests", "hidden": true },
         { "type": "style", "section": "Styles", "hidden": true }
       ]
