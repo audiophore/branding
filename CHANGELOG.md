@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.1](https://github.com/audiophore/branding/compare/v1.0.0...v1.0.1) (2026-05-21)
+
+
+### Documentation
+
+* **readme:** add Consuming the kit and Releases sections ([b75f35d](https://github.com/audiophore/branding/commit/b75f35d0266d30d54afa531c2648fb14e6f8bc89))
+* **readme:** add Consuming the kit and Releases sections ([01f3eb3](https://github.com/audiophore/branding/commit/01f3eb384cde4219537f256b5c57141380c50e79))
+
+
+### Build & Tooling
+
+* drop release-as pin now that v1.0.0 is cut ([7477c1c](https://github.com/audiophore/branding/commit/7477c1c7a0303cbe6a1a12093d9efa198511cfa0))
+* drop release-as pin now that v1.0.0 is cut ([9fc0e28](https://github.com/audiophore/branding/commit/9fc0e28e8f5d41e066957a8d3e4f0b879290c986))
+
 ## 1.0.0 (2026-05-21)
 
 
